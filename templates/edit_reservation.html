@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">UPDATE PAGE</h1>
+                <form action="/reservation_update_two" method="POST">
+                    <div class="form-group">
+                        <label for="user_id">User ID</label>
+                        <input type="text" class="form-control" id="user_id" name="user_id" value="{{ data[0] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">First Name</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ data[1] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Email</label>
+                        <input type="password" class="form-control" id="password" name="password" value="{{ data[2] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Phone</label>
+                        <input type="password" class="form-control" id="password" name="password" value="{{ data[3] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Date</label>
+                        <input type="password" class="form-control" id="password" name="password" value="{{ data[4] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Time</label>
+                        <input type="password" class="form-control" id="password" name="password" value="{{ data[5] }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Guests</label>
+                        <input type="password" class="form-control" id="password" name="password" value="{{ data[6] }}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>                
+            </div>
+        </div>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
