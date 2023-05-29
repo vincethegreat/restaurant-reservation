@@ -3,72 +3,101 @@
 <head>
     <title>Course Menu</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .menu-box {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .menu-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .menu-description {
+            margin-bottom: 10px;
+        }
+
+        .menu-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">MOFF's</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="{{url_for('home')}}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{url_for('booking')}}">Book a Table</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{url_for('menus')}}">Menu</a>
-  
-            </li>
-          </ul>
-        </div>
-      </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="menu-box">
-                    <h2 class="menu-title">Menu</h2>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">SHAREABLES</h3>
-                                <p class="menu-description">Glazed Mini Doughnuts, 100% Angus Beef, Bacon & Onion Jam, American Cheese</p>
-                                <p class="menu-price">$12</p>
-                                <p><strong>Add One:</strong> $5</p>
+    <div class="box">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">MOFF's</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('booking')}}">Book a Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('menus')}}">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="menu-box">
+                        <h2 class="menu-title">Menu</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">SHAREABLES</h3>
+                                    <p class="menu-description">Glazed Mini Doughnuts, 100% Angus Beef, Bacon & Onion Jam, American Cheese</p>
+                                    <p class="menu-price">$12</p>
+                                    <p><strong>Add One:</strong> $5</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">BILLIONAIRE BACON</h3>
+                                    <p class="menu-description">Thick-cut Bacon brushed with a Grizzly Bear Maple Bourbon Glaze</p>
+                                    <p class="menu-price">$15</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">CINNAMON CROUGHNUTS</h3>
+                                    <p class="menu-description">Chocolate Sauce & Crème Anglaise</p>
+                                    <p class="menu-price">$8</p>
+                                </div>
                             </div>
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">BILLIONAIRE BACON</h3>
-                                <p class="menu-description">Thick-cut Bacon brushed with a Grizzly Bear Maple Bourbon Glaze</p>
-                                <p class="menu-price">$15</p>
-                            </div>
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">CINNAMON CROUGHNUTS</h3>
-                                <p class="menu-description">Chocolate Sauce & Crème Anglaise</p>
-                                <p class="menu-price">$8</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">BREAKFAST DOGS</h3>
-                                <p class="menu-description">Breakfast Sausage, Pancake Batter, Maple Syrup</p>
-                                <p class="menu-price">$12</p>
-                            </div>
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">DELUXE PARFAIT</h3>
-                                <p class="menu-description">Vanilla Honey Yogurt, Granola, Seasonal House Compote, Berries</p>
-                                <p class="menu-price">$11</p>
-                            </div>
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">LOX & BAGELS</h3>
-                                <p class="menu-description">Everything Bagel, Black Pepper Cream Cheese, Tomato, Avocado, Onion, Capers</p>
-                                <p class="menu-price">$21</p>
-                            </div>
-                            <div class="menu-item">
-                                <h3 class="menu-subtitle">GREEN CHILI POUTINE</h3>
-                                <p class="menu-description">Crinkle Fries topped with Pork Green Chili, Cheese, Poached Egg, Pico de Gallo, Cilantro Lime Crema</p>
-                                <p class="menu-price">$14</p>
+                            <div class="col-md-6">
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">BREAKFAST DOGS</h3>
+                                    <p class="menu-description">Breakfast Sausage, Pancake Batter, Maple Syrup</p>
+                                    <p class="menu-price">$12</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">DELUXE PARFAIT</h3>
+                                    <p class="menu-description">Vanilla Honey Yogurt, Granola, Seasonal House Compote, Berries</p>
+                                    <p class="menu-price">$11</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">LOX & BAGELS</h3>
+                                    <p class="menu-description">Everything Bagel, Black Pepper Cream Cheese, Tomato, Avocado, Onion, Capers</p>
+                                    <p class="menu-price">$21</p>
+                                </div>
+                                <div class="menu-item">
+                                    <h3 class="menu-subtitle">GREEN CHILI POUTINE</h3>
+                                    <p class="menu-description">Crinkle Fries topped with Pork Green Chili, Cheese, Poached Egg, Pico de Gallo, Cilantro Lime Crema</p>
+                                    <p class="menu-price">$14</p>
+                                </div>
                             </div>
                         </div>
                     </div>

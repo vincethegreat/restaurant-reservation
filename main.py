@@ -52,7 +52,7 @@ def booking_process():
 
     return redirect(url_for('payment'))
 
-@app.route('/reservations')
+@app.route('/reservations', methods=['GET', 'POST'])
 def reservations():
 	conn = connection()
 	cur = conn.cursor()
