@@ -166,7 +166,7 @@ def reservation_update_two():
     
     conn = connection()
     cur = conn.cursor()
-    cur.execute("UPDATE reservations SET reservation_id = '{}', name = '{}', email = '{}', phone = '{}', date = '{}', time = '{}' , number_of_guests = '{}'    WHERE reservation_id = '{}'".format(reservation_id, fname, email, phone, date, time, guests))
+    cur.execute("UPDATE reservations SET reservation_id = '{}', name = '{}', email = '{}', phone = '{}', date = '{}', time = '{}', number_of_guests = '{}' WHERE reservation_id = '{}'".format(reservation_id, fname, email, phone, date, time, guests, reservation_id))
     conn.commit()
     return redirect(url_for('reservations'))
 
