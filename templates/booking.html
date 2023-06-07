@@ -6,6 +6,12 @@
     <title>Reservation</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #e68f8f;
+            color: white;
+      }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -64,9 +70,12 @@
                         <option value="5">5 Course Menu - $80</option>
                     </select>
                 </div>
-                <form action="{{url_for('payment')}}" method="post">
-                    <button type="submit" class="btn btn-primary">Book</button>
-                </form>
+                <center>
+                    <form action="{{url_for('payment')}}" method="post">
+                        <button type="submit" class="btn btn-primary">Book</button>
+                    </form>
+                </center>
+
             </form>
         </div>
     </div>

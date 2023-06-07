@@ -13,6 +13,28 @@
       .custom-color {
         background-color: rgb(161, 124, 124);
       }
+      .about-chefs {
+        background-color: rgb(209, 65, 108);
+      }
+      .chef-image {
+        padding-top: 30px;
+      }
+      .restaurant-image {
+        padding-top: 30px;
+      }
+      .login {
+        display: flex;
+        justify-content: right;
+      }
+      .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .navbar-nav .login {
+        margin-left: auto;
+      }
+
     </style>
   </head>
   <body>
@@ -32,7 +54,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('menus')}}">Menu</a>
-
+          </li>
+          <li class="nav-item">
+            <a class="nav-link login" href="{{url_for('login')}}">Login</a>
           </li>
         </ul>
       </div>
@@ -47,7 +71,9 @@
         <div class="col-md-6">
           <div class="about-restaurant">
             <h2>About Our Restaurant</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed blandit urna, nec vestibulum lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu est ut felis euismod euismod sit amet vitae massa. Aenean porta vehicula ante ac vestibulum. Vestibulum blandit vulputate enim, a lacinia dolor interdum vel.</p>
+            <p>Welcome to MOFF's, an extraordinary destination for fine dining enthusiasts seeking an unforgettable culinary experience. Nestled in the heart of Butuan City, our restaurant sets the stage for an enchanting evening filled with refined flavors, impeccable service, and an ambiance that exudes elegance.
+
+              At MOFF's, we believe that dining should be a sensory journey that transports you to a world of gastronomic delight. From the moment you step through our doors, you'll be enveloped in an atmosphere of sophistication and warmth, where attention to detail is paramount. Our meticulously designed space combines modern aesthetics with timeless touches, creating an inviting haven that sets the perfect backdrop for your dining indulgence.</p>
           </div>
         </div>
         <div class="col-md-6">
@@ -57,11 +83,19 @@
         </div>
       </div>
       <hr>
-      <div class="row">
+      <div class="row about-chefs">
         <div class="col-md-6 col-md-push-6">
-          <div class="about-chefs">
+          <div class="class">
             <h2>About Our Chefs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed blandit urna, nec vestibulum lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla eu est ut felis euismod euismod sit amet vitae massa. Aenean porta vehicula ante ac vestibulum. Vestibulum blandit vulputate enim, a lacinia dolor interdum vel.</p>
+            <p>Welcome to MOFF's, where culinary artistry meets exquisite flavors! We take great pride in introducing our talented chef, Jezer Abella, who brings his passion and expertise to every plate. With a vision to redefine the dining experience, Chef Jezer crafts unforgettable dishes that tantalize the taste buds and ignite the senses. <br>
+
+              Chef Jezer Abella, a seasoned culinary master with years of experience, has honed his skills in renowned kitchens around the world. His culinary journey has taken him from the bustling streets of Paris to the vibrant markets of Tokyo, allowing him to gather inspiration from diverse culinary traditions.<br>
+              
+              At MOFF's, Chef Jezer channels his creativity into a diverse menu that showcases the finest ingredients sourced locally and globally. With a meticulous attention to detail, he effortlessly combines flavors, textures, and presentation to create culinary works of art. Each dish reflects his dedication to quality and his unwavering commitment to delivering an extraordinary dining experience.<br>
+              
+              Our restaurant, MOFF's, offers an inviting ambiance where you can savor Chef Jezer's extraordinary creations. Whether you're joining us for an intimate dinner, a celebratory occasion, or a casual gathering with friends, our commitment to excellence is evident in every aspect of your visit.<br>
+              
+              Prepare to embark on a culinary journey that transcends ordinary dining. Let MOFF's and Chef Jezer Abella indulge your senses and leave an everlasting impression on your palate. Join us as we redefine the art of gastronomy and create unforgettable memories, one exquisite dish at a time.</p>
           </div>
         </div>
         <div class="col-md-6 col-md-pull-6">

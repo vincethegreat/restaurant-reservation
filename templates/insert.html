@@ -131,12 +131,11 @@
             text-align: center;
         }
     </style>
-</head>
 <body>
     <div class="align">
         <div class="grid">
             <h1 class="text--center">Signup</h1>
-            <form class="form login" action="/insert_process" method="POST">
+            <form class="form login" action="{{ url_for('insert_process') }}" method="POST">
                 <div class="form_field">
                     <label for="user_id">User ID</label>
                     <input type="text" id="user_id" name="user_id">
@@ -149,9 +148,15 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password">
                 </div>
-                <input type="submit" class="submitButton" value="Signup">
+                <input type="submit" class="submitButton" value="Signup" onclick="redirectToLogin()">
             </form>
         </div>
     </div>
+
+    <script>
+        function redirectToLogin() {
+            window.location.href = "{{ url_for('login') }}";
+        }
+    </script>
 </body>
 </html>
