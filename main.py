@@ -30,6 +30,11 @@ def home():
 def booking():
     return render_template('booking.html')
 
+@app.route('/congratulatory_message')
+def congratulatory_message():
+    return render_template('message.html')
+
+
 @app.route('/menus')
 def menus():
     return render_template('menus.html')
@@ -92,7 +97,7 @@ def insert_process():
 		cur.execute("INSERT INTO tbl_users VALUES('{}' , '{}' , '{}')".format(theID, uname, pw))
 		conn.commit()
 
-		return redirect("/login")
+		return redirect("/congratulatory_message")
 
 
 #fetching users to display in a table

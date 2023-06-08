@@ -148,14 +148,15 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password">
                 </div>
-                <input type="submit" class="submitButton" value="Signup" onclick="redirectToLogin()">
+                <input type="submit" class="submitButton" value="Signup" onclick="redirectToCongratulatoryMessage()">
             </form>
         </div>
     </div>
 
     <script>
-        function redirectToLogin() {
-            window.location.href = "{{ url_for('login') }}";
+        function redirectToCongratulatoryMessage() {
+            console.log("Redirecting to congratulatory message");
+            window.location.href = "/congratulatory_message";
         }
     </script>
 </body>

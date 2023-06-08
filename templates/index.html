@@ -28,12 +28,13 @@
       }
       .navbar-nav {
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
       }
 
-      .navbar-nav .login {
+      .navbar-nav .username {
         margin-left: auto;
       }
+
 
     </style>
   </head>
@@ -55,9 +56,16 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('menus')}}">Menu</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link login" href="{{url_for('login')}}">Login</a>
+          {% if session.username %}
+          <li class="nav-item" style="margin-left: auto;">
+            <a class="nav-link" href="#">{{ session.username }}</a>
           </li>
+          
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('login')}}">Login</a>
+            </li>
+          {% endif %}
         </ul>
       </div>
     </nav>
